@@ -77,7 +77,7 @@ const SideDrawer = () => {
       };
 
       const { data } = await axios.get(
-        `${process.env.BASE_URL}/api/user?search=${search}`,
+        `${process.env.REACT_APP_BASE_URL}/api/user?search=${search}`,
         config
       );
       // console.log(data);
@@ -108,7 +108,7 @@ const SideDrawer = () => {
       };
 
       const { data } = await axios.post(
-        `${process.env.BASE_URL}/api/chat`,
+        `${process.env.REACT_APP_BASE_URL}/api/chat`,
         { userId },
         config
       );
