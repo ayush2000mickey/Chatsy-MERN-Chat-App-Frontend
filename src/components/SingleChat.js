@@ -21,7 +21,7 @@ import Lottie from "react-lottie";
 import io from "socket.io-client";
 
 // const ENDPOINT = "http://localhost:5000";
-const ENDPOINT = "https://chatsy-mern-chat-app-backend.onrender.com/";
+const ENDPOINT = "https://chatsy-mern-chat-app-backend.onrender.com";
 let socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
@@ -80,7 +80,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       setLoading(true);
 
       const { data } = await axios.get(
-        `/api/message/${selectedChat._id}`,
+        `${process.env.BASE_URL}/api/message/${selectedChat._id}`,
         config
       );
       // console.log(data);
@@ -112,7 +112,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         };
         setNewMessage("");
         const { data } = await axios.post(
-          "/api/message",
+          `${process.env.BASE_URL}/api/message`,
           {
             content: newMessage,
             chatId: selectedChat._id,
