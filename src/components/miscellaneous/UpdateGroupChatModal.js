@@ -212,7 +212,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
         onClick={onOpen}
       />
 
-      <Modal maxW="90%" onClose={onClose} isOpen={isOpen} isCentered>
+      <Modal maxW="90vw" onClose={onClose} isOpen={isOpen} isCentered>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader
