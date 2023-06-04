@@ -40,6 +40,7 @@ const ScrollableChat = ({ messages }) => {
                 borderRadius: "20px",
                 padding: "5px 15px",
                 maxWidth: "75%",
+                overflow: "hidden",
               }}
             >
               {m.content}

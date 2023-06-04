@@ -28,11 +28,12 @@ const ProfileModal = ({ user, children }) => {
           onClick={onOpen}
         />
       )}
-      <Modal maxW="90vw" size="lg" onClose={onClose} isOpen={isOpen} isCentered>
+      <Modal onClose={onClose} isOpen={isOpen} isCentered>
         <ModalOverlay />
-        <ModalContent h="410px">
+        <ModalContent mx="1rem" h="410px">
           <ModalHeader
-            fontSize="40px"
+            fontSize="1.5rem"
+            pt="2rem"
             fontFamily="Work sans"
             display="flex"
             justifyContent="center"
@@ -53,7 +54,7 @@ const ProfileModal = ({ user, children }) => {
               alt={user.name}
             />
             <Text
-              fontSize={{ base: "28px", md: "30px" }}
+              fontSize={{ base: "1.5rem", md: "2rem" }}
               fontFamily="Work sans"
             >
               Email: {user.email}
